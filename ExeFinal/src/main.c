@@ -19,12 +19,20 @@ int search(int* number, int left, int right, int value){
 int main(void) {
 	int n_lines = 0;
 	int *number = get_numbers("yellow_pages.csv", &n_lines);
-	number = counting_sort_numbers(number, &n_lines);
+	number = bubble_sort_numbers(number, &n_lines);
+	//number = counting_sort_numbers(number, &n_lines);
 
 	show_numbers(number, &n_lines);
 
-	int r = search(number, 1, n_lines, 992635865);
-	printf("%d\n", r);
+	int result = search(number, 1, n_lines, 99263586);
+	puts(" Index");
+	puts("--------");
+	printf("%d\n", result);
+	puts("--------\n");
+
+	show_number(number, result);
+
+	release_list();
 
 	return 0;
 }
