@@ -86,6 +86,6 @@ void show_number(int* number, int position){
 	puts("--------\n");
 }
 
-void release_numbers(number){
+void release_numbers(int* number){
 	free(number);
 }
