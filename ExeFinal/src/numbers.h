@@ -10,6 +10,6 @@ void show_numbers(int* number, int *n_lines);
 
 void show_number(int* number, int position);
 
-void release_list();
+void release_numbers(int* number);
 
 #endif

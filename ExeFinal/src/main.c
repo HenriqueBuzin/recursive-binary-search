@@ -32,7 +32,7 @@ int main(void) {
 
 	show_number(number, result);
 
-	release_list();
+	release_numbers(number);
 
 	return 0;
 }

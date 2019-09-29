@@ -85,3 +85,7 @@ void show_number(int* number, int position){
 	printf("%d\n", number[position]);
 	puts("--------\n");
 }
+
+void release_numbers(number){
+	free(number);
+}
