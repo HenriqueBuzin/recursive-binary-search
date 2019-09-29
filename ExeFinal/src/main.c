@@ -4,7 +4,6 @@
 #include "numbers.h"
 
 int search(int* number, int left, int right, int value){
-
 	if(right >= left){
 		int index = (left + (right-left)/2);
 		if(number[index] == value){
@@ -18,12 +17,11 @@ int search(int* number, int left, int right, int value){
 }
 
 int main(void) {
-
 	int n_lines = 0;
 	int *number = get_numbers("yellow_pages.csv", &n_lines);
-	number = sort_numbers(number, &n_lines);
+	number = counting_sort_numbers(number, &n_lines);
 
-	show_number(number, &n_lines);
+	show_numbers(number, &n_lines);
 
 	int r = search(number, 1, n_lines, 992635865);
 	printf("%d\n", r);

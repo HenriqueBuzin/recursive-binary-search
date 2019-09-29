@@ -34,7 +34,7 @@ int* get_numbers(char *file_name, int *n_lines){
 	return number;
 }
 
-int* sort_numbers(int* number, int *n_lines){
+int* counting_sort_numbers(int* number, int *n_lines){
 
 	int i, z, j, max, min;
 
@@ -69,10 +69,16 @@ int* sort_numbers(int* number, int *n_lines){
 
 }
 
-void show_number(int* number, int *n_lines){
-	puts("---------");
+void show_numbers(int* number, int *n_lines){
+	puts("---Vector---");
 	for(int i = 0; i < *n_lines; i++){
 		printf("%d\n", number[i]);
 	}
+	puts("------------");
+}
+
+void show_number(int* number, int position){
+	puts("---------");
+	printf("%d\n", number[position]);
 	puts("---------");
 }
