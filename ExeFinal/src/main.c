@@ -24,7 +24,7 @@ int main(void) {
 
 	show_numbers(number, &n_lines);
 
-	int result = search(number, 1, n_lines, 99263586);
+	int result = search(number, 1, n_lines, 992635860);
 	puts(" Index");
 	puts("--------");
 	printf("%d\n", result);
