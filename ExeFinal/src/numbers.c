@@ -13,11 +13,13 @@ int* get_numbers(char *file_name, int *n_lines){
 		perror("Erro ao abrir arquivo");
 		exit(-1);
 	}
+	fgets(line,11, fp);
 	while(fgets(line, sizeof(line), fp) != NULL){
 		(*n_lines)++;
 	}
 	int *number = malloc(sizeof(int) * *n_lines);
 	rewind(fp);
+	fgets(line,11, fp);
 	while(fscanf(fp, "%d[^\n]", &lines) == 1){
 		number[i] = lines;
 		i++;
