@@ -19,8 +19,12 @@ int search(int* number, int left, int right, int value){
 int main(void) {
 	int n_lines = 0;
 	int *number = get_numbers("yellow_pages.csv", &n_lines);
-	number = bubble_sort_numbers(number, &n_lines);
-	//number = counting_sort_numbers(number, &n_lines);
+	int order = 1;
+	if(order == 1){
+		number = bubble_sort_numbers(number, &n_lines);
+	}else if(order == 2){
+		number = counting_sort_numbers(number, &n_lines);
+	}
 
 	show_numbers(number, &n_lines);
 
