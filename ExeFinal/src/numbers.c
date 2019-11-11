@@ -11,6 +11,22 @@ struct numbers {
     char address[60];
 };
 
+int get_series(number_t * number){
+	return (number->series);
+}
+
+int get_number(number_t * number){
+	return (number->number);
+}
+
+char * get_name(number_t * number){
+	return (number->name);
+}
+
+char * get_address(number_t * number){
+	return (number->address);
+}
+
 number_t * create_number(int series, int number, char name[60], char address[60]){
 
 	number_t * data = malloc(sizeof(number_t));
@@ -35,12 +51,10 @@ number_t ** get_numbers(char *file_name, int *n_lines){
 		exit(-1);
 	}
 
-	// int d = fscanf(fp, "%*[^\n]");
-	// printf("d: %d\n", d);
-
-	fseek(fp, 28, SEEK_SET);
-
 	char line[200];
+
+	fgets(line, sizeof(line), fp);
+
 	*n_lines = 0;
 	while(fgets(line, sizeof(line), fp) != NULL){
 		(*n_lines)++;
@@ -50,10 +64,9 @@ number_t ** get_numbers(char *file_name, int *n_lines){
 
 	numbers = malloc(sizeof(struct numbers *) * *n_lines);
 
-	//d = fscanf(fp, "%*[^\n]");
-	//printf("d: %d\n", d);
+	fseek(fp, 0, SEEK_SET);
 
-	fseek(fp, 28, SEEK_SET);
+	fgets(line, sizeof(line), fp);
 
 	int series;
 	int number;
@@ -63,7 +76,7 @@ number_t ** get_numbers(char *file_name, int *n_lines){
 	int i = 0;
 	while(fscanf(fp, "%d, %d, %59[^,], %59[^\n]", &series, &number, name, address) == 4){
 
-		//printf("Lido %d, %d, %s, %s\n", series, number, name, address);
+		// printf("Lido %d, %d, %s, %s\n", series, number, name, address);
 
 		numbers[i] = create_number(series, number, name, address);
 
@@ -75,11 +88,57 @@ number_t ** get_numbers(char *file_name, int *n_lines){
 }
 
 void bubblesort(number_t **numbers, int n_lines){
-	//number_t * number = NULL;
+	number_t * number = NULL;
+	for(int i = n_lines; i > 1; i--){
+		for(int j = 0; j < i - 1; j++){
+			if(get_number(numbers[j]) > get_number(numbers[j + 1])){
+				number = numbers[j];
+				numbers[j] = numbers[j + 1];
+				numbers[j + 1] = number;
+			}
+		}
+	}
+}
 
-			printf("%d\n", n_lines);
+void show_number(number_t * number){
+	printf("%d %d %s %s \n", get_series(number), get_number(number), get_name(number), get_address(number));
+}
 
+void show_numbers(number_t ** numbers, int n_lines){
+	for(int i = 0; i < n_lines; i++){
+		show_number(numbers[i]);
+	}
+}
 
+void liberate_number(number_t * number){
+	if(number == NULL){
+		perror("liberate_number");
+		exit(-1);
+	}
+	free(number);
+}
 
+void liberate_numbers(number_t ** numbers, int n_lines){
+	if(numbers == NULL){
+		perror("liberate_numbers");
+		exit(-1);
+	}
+	for (int i = 0; i < n_lines; i++){
+		free(numbers[i]);
+	}
+	free(numbers);
+}
 
+int binary_search(number_t ** numbers, int left, int right, int value){
+	if(right >= left){
+		int index = left + (right - left) / 2;
+		if(get_number(numbers[index]) == value){
+			return index;
+		}
+		if(get_number(numbers[index]) > value){
+			return binary_search(numbers, left, index - 1, value);
+		}
+		return binary_search(numbers, index + 1, right, value);
+	}
+	return -1;
 }
