@@ -131,7 +131,7 @@ void liberate_numbers(number_t ** numbers, int n_lines){
 
 int binary_search(number_t ** numbers, int left, int right, int value){
 	if(right >= left){
-		int index = left + (right - left) / 2;
+		int index = (left + right) / 2;
 		if(get_number(numbers[index]) == value){
 			return index;
 		}
