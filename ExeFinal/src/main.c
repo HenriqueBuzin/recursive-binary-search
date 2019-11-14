@@ -19,7 +19,8 @@ int main() {
 		int n_lines = 0;
 
 		// number_t **numbers = get_numbers("yellow_pages.csv", &n_lines);
-		number_t **numbers = get_numbers("data.csv", &n_lines);
+		// number_t **numbers = get_numbers("data.csv", &n_lines);
+		number_t **numbers = get_numbers("100.000.csv", &n_lines);
 
 		merge_sort(numbers, 0, n_lines - 1);
 
