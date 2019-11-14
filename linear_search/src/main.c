@@ -3,6 +3,8 @@
 #include <time.h>
 
 #include "numbers.h"
+#include "merge_sort.h"
+#include "linear_search.h"
 
 int main() {
 
@@ -15,11 +17,13 @@ int main() {
 
 		int n_lines = 0;
 
-		number_t **numbers = get_numbers("yellow_pages.csv", &n_lines);
-		bubblesort(numbers, n_lines);
+		// number_t **numbers = get_numbers("yellow_pages.csv", &n_lines);
+		number_t **numbers = get_numbers("data.csv", &n_lines);
+
+		merge_sort(numbers, 0, n_lines - 1);
 
 		inicio = clock();
-		int d = linear_search(numbers, n_lines, 9);
+		int d = linear_search(numbers, n_lines, 922158208);
 		fim = clock();
 
 		puts("\n----------------------\n");

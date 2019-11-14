@@ -3,6 +3,9 @@
 #include <time.h>
 
 #include "numbers.h"
+#include "merge_sort.h"
+#include "binary_search.h"
+
 
 int main() {
 
@@ -11,17 +14,18 @@ int main() {
 	double media = 0.0;
 
 	int i;
-	for(i = 1; i <= 2; i++){
+	for(i = 1; i <= 1; i++){
 
 		int n_lines = 0;
 
-		number_t **numbers = get_numbers("yellow_pages.csv", &n_lines);
-		bubblesort(numbers, n_lines);
+		// number_t **numbers = get_numbers("yellow_pages.csv", &n_lines);
+		number_t **numbers = get_numbers("data.csv", &n_lines);
+
+		merge_sort(numbers, 0, n_lines - 1);
 
 		inicio = clock();
-		int d = binary_search(numbers, 0, n_lines - 1, 9);
+		int d = binary_search(numbers, 0, n_lines - 1, 922158208);
 		fim = clock();
-
 
 		puts("\n----------------------\n");
 		show_numbers(numbers, n_lines);

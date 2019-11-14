@@ -87,19 +87,6 @@ number_t ** get_numbers(char *file_name, int *n_lines){
 	return numbers;
 }
 
-void bubblesort(number_t **numbers, int n_lines){
-	number_t * number = NULL;
-	for(int i = n_lines; i > 1; i--){
-		for(int j = 0; j < i - 1; j++){
-			if(get_number(numbers[j]) > get_number(numbers[j + 1])){
-				number = numbers[j];
-				numbers[j] = numbers[j + 1];
-				numbers[j + 1] = number;
-			}
-		}
-	}
-}
-
 void show_number(number_t * number){
 	printf("%d %d %s %s \n", get_series(number), get_number(number), get_name(number), get_address(number));
 }
@@ -127,18 +114,4 @@ void liberate_numbers(number_t ** numbers, int n_lines){
 		free(numbers[i]);
 	}
 	free(numbers);
-}
-
-int binary_search(number_t ** numbers, int left, int right, int value){
-	if(right >= left){
-		int index = (left + right) / 2;
-		if(get_number(numbers[index]) == value){
-			return index;
-		}
-		if(get_number(numbers[index]) > value){
-			return binary_search(numbers, left, index - 1, value);
-		}
-		return binary_search(numbers, index + 1, right, value);
-	}
-	return -1;
 }
