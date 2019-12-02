@@ -1,7 +1,6 @@
-
 #ifndef HEAP_H_INCLUDED
 
-#include "../src/numbers.h"
+#include "numbers.h"
 
 int father(int i);
 

@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <time.h>
 
-#include "../src/heap.h"
-#include "../src/numbers.h"
+#include "heap.h"
+#include "numbers.h"
 #include "linear_search.h"
 
 int main() {
@@ -24,7 +24,8 @@ int main() {
 		heap_sort(numbers, n_lines);
 
 		start = clock();
-		int d = linear_search(numbers, n_lines, 999999451);
+		// 999999451
+		int d = linear_search(numbers, n_lines, 926764930);
 		end = clock();
 
 		puts("\n----------------------\n");

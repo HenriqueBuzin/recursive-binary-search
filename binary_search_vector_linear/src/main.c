@@ -26,7 +26,8 @@ int main() {
 		returnar_maior(numbers, n_lines);
 
 		inicio = clock();
-		int d = linear_search(numbers, n_lines, 999999451);
+		//999999451
+		int d = linear_search(numbers, n_lines, 926764930);
 		fim = clock();
 
 		// puts("\n----------------------\n");

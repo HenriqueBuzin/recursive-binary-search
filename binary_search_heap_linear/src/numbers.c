@@ -1,9 +1,8 @@
-#include "../src/numbers.h"
-
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
+#include "numbers.h"
 
 struct numbers {
 	int series;

@@ -1,10 +1,10 @@
-#include "../src/heap.h"
+#include "heap.h"
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 
-#include "../src/numbers.h"
+#include "numbers.h"
 
 int father(int i) {
 	return floor((i - 1) / 2);
