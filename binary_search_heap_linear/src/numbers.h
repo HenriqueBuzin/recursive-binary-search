@@ -24,8 +24,4 @@ void liberate_number(number_t * number);
 
 void liberate_numbers(number_t ** numbers, int n_lines);
 
-int linear_search(number_t ** numbers, int n_lines, int value);
-
-void returnar_maior(number_t ** numbers, int n_lines);
-
 #endif

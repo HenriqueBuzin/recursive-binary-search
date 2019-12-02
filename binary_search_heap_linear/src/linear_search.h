@@ -1,5 +1,8 @@
+
 #ifndef LINEAR_SEARCH_H_INCLUDED
 
-int linear_search(number_t ** numbers, int n_lines, int value);
+#include "../src/numbers.h"
+
+int binary_search(number_t ** numbers, int n_lines);
 
 #endif

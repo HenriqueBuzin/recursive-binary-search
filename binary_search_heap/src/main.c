@@ -24,7 +24,7 @@ int main() {
 		heap_sort(numbers, n_lines);
 
 		start = clock();
-		int d = binary_search(numbers, n_lines);
+		int d = binary_search(numbers, n_lines, 9);
 		end = clock();
 
 		puts("\n----------------------\n");

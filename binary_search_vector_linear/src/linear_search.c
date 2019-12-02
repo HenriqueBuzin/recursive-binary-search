@@ -1,9 +1,7 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-#include "../src/heap.h"
-#include "../src/numbers.h"
-#include "linear_search.h"
+#include "numbers.h"
 
 int linear_search(number_t ** numbers, int n_lines, int value){
 	for(int i = 0; i < n_lines; i++){

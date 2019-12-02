@@ -1,8 +1,9 @@
-#include <stdio.h>
+#include "../src/numbers.h"
+
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
-#include "numbers.h"
 
 struct numbers {
 	int series;
@@ -87,19 +88,6 @@ number_t ** get_numbers(char *file_name, int *n_lines){
 	return numbers;
 }
 
-void bubblesort(number_t **numbers, int n_lines){
-	number_t * number = NULL;
-	for(int i = n_lines; i > 1; i--){
-		for(int j = 0; j < i - 1; j++){
-			if(get_number(numbers[j]) > get_number(numbers[j + 1])){
-				number = numbers[j];
-				numbers[j] = numbers[j + 1];
-				numbers[j + 1] = number;
-			}
-		}
-	}
-}
-
 void show_number(number_t * number){
 	printf("%d %d %s %s \n", get_series(number), get_number(number), get_name(number), get_address(number));
 }
@@ -128,10 +116,3 @@ void liberate_numbers(number_t ** numbers, int n_lines){
 	}
 	free(numbers);
 }
-
-
-void returnar_maior(number_t ** numbers, int n_lines){
-
-	printf("%d", (numbers[n_lines - 1])->number);
-}
-

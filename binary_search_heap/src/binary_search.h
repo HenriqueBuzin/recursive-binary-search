@@ -2,6 +2,6 @@
 
 #include "numbers.h"
 
-int binary_search(number_t ** numbers, int n_lines);
+int binary_search(number_t ** numbers, int n_lines, int value);
 
 #endif
