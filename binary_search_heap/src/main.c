@@ -17,18 +17,19 @@ int main() {
 
 		int n_lines = 0;
 
-		number_t **numbers = get_numbers("yellow_pages.csv", &n_lines);
+		// number_t **numbers = get_numbers("yellow_pages.csv", &n_lines);
 		// number_t **numbers = get_numbers("data.csv", &n_lines);
-		//number_t **numbers = get_numbers("100.000.csv", &n_lines);
+		number_t **numbers = get_numbers("100.000.csv", &n_lines);
 
 		heap_sort(numbers, n_lines);
 
 		start = clock();
-		int d = binary_search(numbers, n_lines, 9);
+		// 999999451
+		int d = binary_search(numbers, 0, 999999451);
 		end = clock();
 
 		puts("\n----------------------\n");
-		show_numbers(numbers, n_lines);
+		// show_numbers(numbers, n_lines);
 		printf("\nO item foi encontrado na posição: %d\n", d);
 
 		total = (double) ((end - start) * 1000) / CLOCKS_PER_SEC;
