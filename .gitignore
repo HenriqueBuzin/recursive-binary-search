@@ -1,7 +1,22 @@
-# Others
-.settings
-.cproject
-.project
+# binary_search_heap
+binary_search_heap/.settings
+binary_search_heap/.cproject
+binary_search_heap/.project
+
+# binary_search_heap_linear
+binary_search_heap_linear/.settings
+binary_search_heap_linear/.cproject
+binary_search_heap_linear/.project
+
+# binary_search_vector
+binary_search_vector/.settings
+binary_search_vector/.cproject
+binary_search_vector/.project
+
+# binary_search_vector_linear
+binary_search_vector_linear/.settings
+binary_search_vector_linear/.cproject
+binary_search_vector_linear/.project
 
 # Prerequisites
 *.d
