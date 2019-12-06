@@ -27,4 +27,8 @@ Caso a metade direita seja maior ou igual a esquerda e não foi encontrado nenhu
 Esse algoritmo é recursivo, e sua complexidade é: O(log n).
 
 ### Exemplo
-->![Comparação entre a busca linear e a busca binária](Extras/search.gif)<-
+![Comparação entre a busca linear e a busca binária](Extras/search.gif)
+
+<p align="center">
+  <img width="460" height="300" src="Extras/search.gif">
+</p>
