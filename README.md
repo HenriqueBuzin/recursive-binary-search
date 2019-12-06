@@ -7,3 +7,5 @@ Esse projeto contém 2 projetos dentro: <br />
 
 ## Como executar
 Para executar eles é ncessário ter o compilador do C configurado no Eclipse, após isso basta seguir o seguinte caminho no Eclipse: File > New > C\C++ Project > C Maneged Build > Configurar as opções (nome do projeto, compilador desejado...) > copiar os arquivos da pasta desejada desse git para esse projeto.
+
+![Comparação entre a busca linear e a busca binária](extras/search.gif)
