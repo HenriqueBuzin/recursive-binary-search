@@ -13,6 +13,8 @@ Esse projeto contém 2 projetos dentro: <br />
 Para executar eles é ncessário ter o compilador do C configurado no Eclipse, após isso basta seguir o seguinte caminho no Eclipse: File > New > C\C++ Project > C Maneged Build > Configurar as opções (nome do projeto, compilador desejado...) > copiar os arquivos da pasta desejada desse git para esse projeto.
 
 ### Funcionamento do Algoritmo
+Os dois algoritmos possuem um loop (for) para controlar quantas vezes quer executar o algoritmo, e também possuem recursos para ver os as informações ordenadas e o tempo percorrido para isso. <br />
+
 Dado um vetor x de tamanho x com seus valores sendo números inteiros.
 #### Busca Linear
 Temos a busca linear que irá percorrer dado posição do vetor x, a fim de verificar em qual posição está o valor correspondente a busca, ou se já existe esse valor lá. <br />
