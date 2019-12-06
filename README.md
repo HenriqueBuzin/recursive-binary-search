@@ -1,6 +1,6 @@
 # Recursive Binary Search
-# Disciplina: Programação 2
-# Faculdade: IFSC Florianópolis
+Disciplina: Programação 2 <br />
+Faculdade: IFSC Florianópolis
 
 # Descrição
 Esse projeto contém 2 projetos dentro: <br />
