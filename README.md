@@ -15,7 +15,7 @@ Para executar eles é ncessário ter o compilador do C configurado no Eclipse, a
 ### Funcionamento do Algoritmo
 Os dois algoritmos possuem um loop (for) para controlar quantas vezes quer executar o algoritmo, e também possuem recursos para ver os as informações ordenadas e o tempo percorrido para isso. <br />
 
-Dado um vetor x de tamanho x com seus valores sendo números inteiros.
+Dado um vetor x de tamanho n com seus valores sendo números inteiros.
 #### Busca Linear
 Temos a busca linear que irá percorrer dado posição do vetor x, a fim de verificar em qual posição está o valor correspondente a busca, ou se já existe esse valor lá. <br />
 
