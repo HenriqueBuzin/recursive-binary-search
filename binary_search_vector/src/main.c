@@ -18,21 +18,21 @@ int main() {
 
 		int n_lines = 0;
 
-		number_t **numbers = get_numbers("yellow_pages.csv", &n_lines);
+		//number_t **numbers = get_numbers("yellow_pages.csv", &n_lines);
 		// number_t **numbers = get_numbers("data.csv", &n_lines);
-		// number_t **numbers = get_numbers("100.000.csv", &n_lines);
+		number_t **numbers = get_numbers("100.000.csv", &n_lines);
 
 		merge_sort(numbers, 0, n_lines - 1);
 
 		inicio = clock();
-		int d = binary_search(numbers, 0, n_lines - 1, 926764930);
+		int d = binary_search(numbers, 0, n_lines - 1, 999999451);
 		fim = clock();
 
 		// puts("\n----------------------\n");
 		// show_numbers(numbers, n_lines);
 		printf("\nO item foi encontrado na posição: %d\n", d);
 
-		total = (double) ((fim - inicio) * 1000) / CLOCKS_PER_SEC;
+		total = (double) (fim - inicio) / (CLOCKS_PER_SEC * 1000);
 		media += total;
 
 		printf("Tempo decorrido: %lf (ms)\n", total);

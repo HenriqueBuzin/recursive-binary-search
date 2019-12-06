@@ -1,9 +1,6 @@
 # Recursive Binary Search
-Esse projeto contém 4 projetos dentro: <br />
+Esse projeto contém 2 projetos dentro: <br />
 
-## Projetos que utilizam o Heap
-`binary_search_heap // Pesquisa Binária no Heap` <br />
-`binary_search_heap_linear // Pesquisa linear no Heap` 
 ## Projetos que utilizam o Vetor
 `binary_search_vector // Pesquisa Binária no Heap` <br />
 `binary_search_vector_linear // Pesquisa linear no Heap`
