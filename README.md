@@ -5,7 +5,7 @@ Faculdade: IFSC Florianópolis
 # Descrição
 Esse projeto contém 2 projetos dentro: <br />
 
-## Projetos que utilizam o Vetor
+## Projetos
 `binary_search_vector // Pesquisa Binária no Heap` <br />
 `binary_search_vector_linear // Pesquisa linear no Heap`
 
