@@ -21,7 +21,7 @@ Temos a busca linear que irá percorrer dado posição do vetor x, a fim de veri
 
 Nesse caso, o algoritmo é iterativo, e sua complexidade é O(n).
 
-#### Busca binária recursiva
+#### Busca Binária Recursiva
 Temos que a busca será feita da seguinte maneira: em um vetor[0..n] ordenado, será calculado o meio, será  verificado se o valor corresponte ao valor do meio, caso não corresponta, se o valor for menor ele irá realizar o mesmo procedimento, mas só do início até o meio (metade esquerda), caso o contrário (maior), ele fará do meio para o último elemento do vetor (metade direita). <br />
 
 Caso a metade direita seja maior ou igual a esquerda e não foi encontrado nenhum valor corresponte ao valor pesquisa, o valor não está contido nos valores do vetor. <br />
